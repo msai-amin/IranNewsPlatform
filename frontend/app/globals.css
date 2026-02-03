@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply text-gray-900 bg-gray-50;
+  }
+  
+  /* Better focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gray-900 ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+  }
+  
+  /* Line clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Prose styles for article content */
+  .prose {
+    @apply text-gray-700;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+  
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+  
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-200;
+  }
+  
+  .card-hover:hover {
+    @apply border-gray-300 shadow-sm transform -translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  /* Animation for loading states */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Text balance for headlines */
+  .text-balance {
+    text-wrap: balance;
+  }
+}

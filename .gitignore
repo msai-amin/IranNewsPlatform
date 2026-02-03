@@ -21,6 +21,10 @@ out/
 .env.*.local
 *.local
 
+# Telegram sessions
+session_*
+*.session
+
 # IDE / OS
 .idea/
 .vscode/
