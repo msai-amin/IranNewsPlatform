@@ -1,4 +1,4 @@
-# Iran News Wire
+# Iran Situation Room
 
 An autonomous, resilient, and cost-efficient news gathering engine for Iran. This system uses a tiered AI model strategy to process Persian news from Telegram channels and web sources, translating, fact-checking, and generating AP Style news articles.
 
